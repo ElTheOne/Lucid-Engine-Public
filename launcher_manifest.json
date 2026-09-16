@@ -1,0 +1,100 @@
+{
+  "version": "0.06a",
+  "channel": "alpha",
+  "update_kind": "full",
+  "content_revision": "0.06a-content.1",
+  "hotfix": false,
+  "notes": "Lucid Engine 0.06a. Engine, launcher and shared asset downloads are hosted on GitHub. Windows packaging limitation: Lua gamemode scripts are not included in the current Windows or assets downloads and must be supplied separately.",
+  "changelog": [
+    "Lucid Engine 0.06a builds for macOS ARM64 and Windows x64.",
+    "Updated sandbox, Prop Tag, multiplayer, materials, lighting and editor systems.",
+    "Corrected engine/content archive checksums and sizes.",
+    "Corrected Windows extraction layout and macOS runtime-helper startup."
+  ],
+  "platforms": {
+    "macos-arm64": {
+      "engine": {
+        "path": ".launcher/downloads/lucid-macos-arm64-engine_core.zip",
+        "url": "https://github.com/ElTheOne/Lucid-Engine-Public/releases/download/Release/lucid-macos-arm64-engine_core.zip",
+        "sha256": "35cb909e55c2fd70b4ee472e94dcddeb56173a97504a951336a913c57b348bab",
+        "size": 165455902,
+        "kind": "engine-archive",
+        "archive": "zip",
+        "extract_to": ".",
+        "strip_components": 1
+      },
+      "assets": [
+        {
+          "path": ".launcher/downloads/assets.zip",
+          "url": "https://github.com/ElTheOne/Lucid-Engine-Public/releases/download/Release/assets.zip",
+          "sha256": "4b8f93ab4c88abe60f2165460e3888e699a7991358f0710807d40cd628980960",
+          "size": 1210289761,
+          "kind": "asset-archive",
+          "archive": "zip",
+          "extract_to": ".",
+          "strip_components": 0
+        }
+      ],
+      "files": [],
+      "launch": {
+        "executable": "launch_engine.command",
+        "args": [
+          "--fullscreen"
+        ]
+      }
+    },
+    "windows-x64": {
+      "engine": {
+        "path": ".launcher/downloads/lucid-Windows-engine_core.zip",
+        "url": "https://github.com/ElTheOne/Lucid-Engine-Public/releases/download/Release/lucid-Windows-engine_core.zip",
+        "sha256": "e5aed12e23e3e6391533ecd75ce387bf5dc5e7fa3330da0006f695da4fe1d83c",
+        "size": 24160476,
+        "kind": "engine-archive",
+        "archive": "zip",
+        "extract_to": "bin",
+        "strip_components": 1
+      },
+      "assets": [
+        {
+          "path": ".launcher/downloads/assets.zip",
+          "url": "https://github.com/ElTheOne/Lucid-Engine-Public/releases/download/Release/assets.zip",
+          "sha256": "4b8f93ab4c88abe60f2165460e3888e699a7991358f0710807d40cd628980960",
+          "size": 1210289761,
+          "kind": "asset-archive",
+          "archive": "zip",
+          "extract_to": ".",
+          "strip_components": 0
+        }
+      ],
+      "files": [],
+      "launch": {
+        "executable": "bin/engine_core.exe",
+        "args": [
+          "--fullscreen"
+        ]
+      }
+    }
+  },
+  "launcher": {
+    "version": "0.06a",
+    "build": 1,
+    "platforms": {
+      "macos-arm64": {
+        "url": "https://github.com/ElTheOne/Lucid-Engine-Public/releases/download/Release/lucid-macos-arm64-lucid_launcher.zip",
+        "sha256": "de5e927137ec067b3a187cfe735b45c187c08830f0ffbba5934862ab84276d5b",
+        "size": 3955001,
+        "archive": "zip",
+        "strip_components": 1,
+        "executable": "lucid_launcher"
+      },
+      "windows-x64": {
+        "url": "https://github.com/ElTheOne/Lucid-Engine-Public/releases/download/Release/lucid-Windows-lucid_launcher.zip",
+        "sha256": "6ba8334cb179c7e9352241a70b0001ee3d405d89c731c24003c60095572fccef",
+        "size": 4014168,
+        "archive": "zip",
+        "strip_components": 1,
+        "executable": "lucid_launcher.exe"
+      }
+    }
+  }
+}
